@@ -11,7 +11,7 @@ const navlinks: Array<{ href: string, text: string }> = [
 export default function NavBar() {
   const pathname = usePathname()
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <ul>
         {navlinks.map(
           l => <li key={l.href}>
