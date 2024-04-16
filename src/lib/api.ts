@@ -1,6 +1,3 @@
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
-
 const api_url = 'https://vfor-h1.onrender.com';
 
 export async function get(path: string, token: string | null = null): Promise<Response> {
@@ -11,7 +8,7 @@ export async function get(path: string, token: string | null = null): Promise<Re
   });
 }
 
-export async function post(path: string, token: string | null = null, body: Object = {}): Promise<Response> {
+export async function post(path: string, body: Object, token: string | null = null): Promise<Response> {
   return fetch(`${api_url}/${path}`, {
     method: 'POST',
     headers: {
