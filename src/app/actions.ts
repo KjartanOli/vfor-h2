@@ -40,3 +40,8 @@ export async function login(data: FormData) {
   cookies().set('SESSION', token)
   redirect('/');
 }
+
+export async function signout() {
+  cookies().delete('SESSION');
+  redirect('/');
+}
