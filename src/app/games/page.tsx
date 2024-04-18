@@ -31,8 +31,8 @@ export default async function Page({ searchParams }: { searchParams?: { [key: st
               {games.map(game => <li key={game.id}><GameCard game={game}></GameCard></li>)}
             </ul>
             <div>
-              {page > 1 ? <Link href={`?page=${page - 1}`}>Previous</Link> : null}
-              {((await getGames(page + 1)).length > 0 ? <Link href={`?page=${page + 1}`}>Next</Link> : null)}
+              {page > 1 ? <Link href={`?page=${page - 1}`}>← Previous</Link> : null}
+              {((await getGames(page + 1)).length > 0 ? <Link href={`?page=${page + 1}`}>Next →</Link> : null)}
             </div>
           </main>)
 }
