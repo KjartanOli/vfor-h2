@@ -42,6 +42,11 @@ export async function login(data: FormData) {
   redirect('/');
 }
 
+export async function signout() {
+  cookies().delete('SESSION');
+  redirect('/');
+}
+
 function form_parse_int(value: ReturnType<FormData["get"]>): number {
   if (!value || typeof value !== 'string')
     throw new Error('Invalid argument');
