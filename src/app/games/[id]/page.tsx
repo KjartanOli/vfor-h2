@@ -1,5 +1,6 @@
 import { get } from "@/lib/api";
 import { Game } from "@/lib/types";
+import Image from 'next/image';
 
 async function getGame(id: string): Promise<Game> {
   const result = await get(`games/${id}`);
@@ -19,6 +20,7 @@ export default async function Page({ params }: { params: { id: string }}) {
       <p>Category: {game.category}</p>
       <p>Studio: {game.studio}</p>
       <p>Released: {game.year}</p>
+      {game.image ? <Image src={game.image} alt={""}></Image> : null }
       <p>{game.description}</p>
     </main>
   )
