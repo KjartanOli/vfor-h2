@@ -5,6 +5,7 @@ import { Game } from "@/lib/types";
 import { get_user_id } from "@/lib/utils";
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 async function getGame(id: string): Promise<Game> {
   const result = await get(`games/${id}`);
@@ -38,6 +39,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <p className={styles.category}>Category: {game.category}</p>
         <p className={styles.studio}>Studio: {game.studio}</p>
         <p className={styles.released}>Released: {game.year}</p>
+        <p><Link href={`/games/${params.id}/ratings`}>See ratings</Link></p>
         <div className={styles.imageContainer}>
           {game.image ? <Image src={game.image} alt=""></Image> : null}
         </div>
