@@ -6,13 +6,13 @@
     border-radius: 8px;
   }
   
-  .username, .name, .password {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+  .usernameInput, .nameInput, .passwordInput {
+    width: 100%; 
+    padding: 10px 10px; 
+    border: 2px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+  }  
   
   .button {
     padding: 10px 20px;
