@@ -24,6 +24,8 @@ export function get_user_id(): number | null {
 
   try {
     const res = jwt.verify(token, jwt_secret());
+    if (typeof res === 'string')
+      return null;
     return res.data.id;
   } catch (e) {
     return null;
