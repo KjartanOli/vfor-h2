@@ -26,6 +26,6 @@ export function is_logged_in(): number | null {
     const res = jwt.verify(token, jwt_secret());
     return res.data.id;
   } catch (e) {
-    redirect('/login');
+    return null;
   }
 }
