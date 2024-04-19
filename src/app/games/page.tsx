@@ -3,6 +3,7 @@ import { Game } from "@/lib/types";
 import GameCard from "../ui/cards/GameCard";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import styles from "./page.module.css";
 
 async function getGames(page: number = 1): Promise<Array<Game>> {
   const result = await get(`games?page=${page}`);
@@ -25,14 +26,14 @@ export default async function Page({ searchParams }: { searchParams?: { [key: st
   if (games.length === 0 && page > 1)
     redirect(`?page=${page - 1}`);
 
-  return (<main>
-            <h1>Games</h1>
-            <ul>
+  return (<main className={styles.container}>
+            <h1 className={styles.header}>Games</h1>
+            <ul className={styles.gamesContainer}>
               {games.map(game => <li key={game.id}><GameCard game={game}></GameCard></li>)}
             </ul>
-            <div>
-              {page > 1 ? <Link href={`?page=${page - 1}`}>← Previous</Link> : null}
-              {((await getGames(page + 1)).length > 0 ? <Link href={`?page=${page + 1}`}>Next →</Link> : null)}
+            <div className={styles.pagination}>
+              {page > 1 ? <Link href={`?page=${page - 1}`} className={styles.link}>← Previous</Link> : null}
+              {((await getGames(page + 1)).length > 0 ? <Link href={`?page=${page + 1}`} className={styles.link}>Next →</Link> : null)}
             </div>
           </main>)
 }
