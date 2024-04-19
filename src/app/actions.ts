@@ -1,6 +1,7 @@
 'use server'
 
-import { post } from "@/lib/api";
+import { patch, post } from "@/lib/api";
+import { get_token, is_logged_in } from "@/lib/utils";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -44,4 +45,33 @@ export async function login(data: FormData) {
 export async function signout() {
   cookies().delete('SESSION');
   redirect('/');
+}
+
+function form_parse_int(value: ReturnType<FormData["get"]>): number {
+  if (!value || typeof value !== 'string')
+    throw new Error('Invalid argument');
+  return parseInt(value);
+}
+
+export async function rate(data: FormData) {
+  const game = form_parse_int(data.get('game'));
+  const rating = form_parse_int(data.get('rating'));
+
+  console.log(game, rating);
+
+  const result = await post(`games/${game}/ratings`, { rating }, get_token());
+  console.log(await result.text())
+  if (!result.ok)
+    throw new Error('Network error');
+  redirect(`/games/${game}`);
+}
+
+export async function update_rating(data: FormData) {
+  const game = form_parse_int(data.get('game'));
+  const rating = form_parse_int(data.get('rating'));
+
+  const result = await patch(`games/${game}/ratings`, { rating }, get_token());
+  if (!result.ok)
+    throw new Error('Network error');
+  redirect(`/games/${game}`);
 }
