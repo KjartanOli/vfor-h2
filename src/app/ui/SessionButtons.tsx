@@ -5,7 +5,7 @@ import styles from "./SessionButtons.module.css";
 
 export default function SessionButtons() {
   if (cookies().get('SESSION'))
-    return (<form action={signout}><button>Sign out</button></form>)
+    return (<form action={signout} className={styles.container}><button className={styles.signOut}>Sign out</button></form>)
   return (<div className={styles.container}>
             <Link href="/login" className={styles.login}>Log in</Link>
             <Link href="/register" className={styles.register}>Register</Link>
