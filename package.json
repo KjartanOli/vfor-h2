@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "jsonwebtoken": "^9.0.2",
     "next": "14.2.1",
     "node-jsonwebtoken": "^0.0.1",
     "react": "^18",

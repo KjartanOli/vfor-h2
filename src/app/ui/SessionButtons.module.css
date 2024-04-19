@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    gap: 10px; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .login, .register, .signOut {
+    padding: 8px 16px; 
+    border: 1px solid transparent;
+    text-decoration: none; 
+    background-color: #f0f0f0;
+    color: #333; 
+    border-radius: 5px;
+  }
+  
+  .login:hover, .register:hover, .signOut:hover {
+    border-color: #ccc;
+    background-color: #e9e9e9; 
+  }
+  

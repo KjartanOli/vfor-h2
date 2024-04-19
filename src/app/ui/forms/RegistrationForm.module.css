@@ -1,0 +1,30 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .usernameInput, .nameInput, .passwordInput {
+    width: 100%; 
+    padding: 10px 10px; 
+    border: 2px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+  }  
+  
+  .button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #848486; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #040404; 
+  }
+  

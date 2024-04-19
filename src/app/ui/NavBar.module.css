@@ -1,26 +1,34 @@
-.navbar > ul {
+.navbar {
+    text-align: left; 
+    padding: 10px 0; 
+  }
+  
+  .navbar > ul {
     padding: 0;
-    list-style: none;
-}
-
-.navbar > ul > li {
-    display: inline-block;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    font-weight: bold;
-}
-
-.navbar a {
+    list-style: none; 
+    display: flex; 
+    justify-content: flex-start; 
+    margin: 0; 
+  }
+  
+  .navbar > ul > li {
+    margin: 0 20px; 
+    padding: 5px 0; 
+  }
+  
+  .navbar a {
     text-decoration: none;
-}
-
-.active {
-    color: #f2f2f2;
-    text-shadow: black 1px 0 10px;
-}
-
-.inactive {
+    font-weight: bold; 
+    padding: 10px; 
+    transition: color 0.3s; 
+  }
+  
+  .active {
     
-}
+    text-shadow: 0 0 10px #fff; 
+  }
+  
+  .inactive:hover {
+    color: #bbb; 
+  }
+  

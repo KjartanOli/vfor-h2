@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  color: #e0dede;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content {
+  width: 100%;
+  max-width: 600px; /* Restricting max-width for better readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*background-color: #9c9999;*/
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.category, .studio, .released, .description {
+  text-align: center;
+  color: #c6c1c1;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

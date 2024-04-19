@@ -1,0 +1,46 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    /* background-color: #f7f7f7; */ 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  .inputRating {
+    display: none;
+  }
+  
+  .ratingLabel {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #c6c1c1;
+  }
+  
+  .rating {
+    width: 100px; 
+    padding: 5px 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .button {
+    padding: 10px 15px;
+    background-color: #2a2b2f;
+    color: white;
+    border: 2px solid #2a2b2f;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #d8d8d8; 
+    color: #2a2b2f;
+  }
+  
