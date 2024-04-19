@@ -19,6 +19,17 @@ export async function post(path: string, body: Object, token: string | null = nu
   });
 }
 
+export async function patch(path: string, body: Object, token: string | null = null): Promise<Response> {
+  return fetch(`${api_url}/${path}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { 'Authorization': `Bearer ${token}` } : {})
+    },
+    body: JSON.stringify(body),
+  });
+}
+
 export async function del(path: string, token: string): Promise<Response> {
   return fetch(`${api_url}/${path}`, {
     method: 'DELETE',
