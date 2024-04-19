@@ -17,7 +17,7 @@ export function get_token(): string | undefined {
   return cookies().get('SESSION')?.value;
 }
 
-export function is_logged_in(): number | null {
+export function get_user_id(): number | null {
   const token = get_token();
   if (!token)
     return null;

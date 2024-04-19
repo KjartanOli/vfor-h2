@@ -2,7 +2,7 @@ import RatingForm from "@/app/ui/forms/RatingForm";
 import { get } from "@/lib/api";
 import { getRatings } from "@/lib/games";
 import { Game } from "@/lib/types";
-import { is_logged_in } from "@/lib/utils";
+import { get_user_id } from "@/lib/utils";
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -15,7 +15,7 @@ async function getGame(id: string): Promise<Game> {
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
-  const user_id = is_logged_in();
+  const user_id = get_user_id();
   const game = await getGame(params.id);
 
   return (

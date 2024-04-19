@@ -1,7 +1,7 @@
 'use server'
 
 import { patch, post } from "@/lib/api";
-import { get_token, is_logged_in } from "@/lib/utils";
+import { get_token } from "@/lib/utils";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
