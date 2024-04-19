@@ -1,5 +1,5 @@
 # URL
-https://vfor-h2.onrender.com/games/5/ratings
+https://vfor-h2.onrender.com/
 
 # Uppsetning
 
@@ -15,5 +15,5 @@ password: 123
 ```
 
 # Hópmeðlimir
-Kjartan Óli Ágústsson (koa20@hi.is)
-Svana Björg Birgisdóttir
+- Kjartan Óli Ágústsson (koa20@hi.is)
+- Svana Björg Birgisdóttir
