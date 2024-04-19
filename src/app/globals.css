@@ -5,9 +5,9 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 214, 219, 220;
+  --background-start-rgb: 11, 7, 5;
+  --background-end-rgb: 4, 3, 1;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
