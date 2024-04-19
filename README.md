@@ -1,3 +1,6 @@
+# URL
+https://vfor-h2.onrender.com/games/5/ratings
+
 # Uppsetning
 
 ```
