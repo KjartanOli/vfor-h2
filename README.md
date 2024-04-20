@@ -16,4 +16,4 @@ password: 123
 
 # Hópmeðlimir
 - Kjartan Óli Ágústsson (koa20@hi.is)
-- Svana Björg Birgisdóttir
+- Svana Björg Birgisdóttir (sbb51@hi.is)
