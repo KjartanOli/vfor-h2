@@ -41,7 +41,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <p className={styles.released}>Released: {game.year}</p>
         <p><Link href={`/games/${params.id}/ratings`}>See ratings</Link></p>
         <div className={styles.imageContainer}>
-          {game.image ? <Image src={game.image} alt=""></Image> : null}
+          {game.image ? <Image src={game.image} width="500" height="500" alt=""></Image> : null}
         </div>
         <p className={styles.description}>{game.description}</p>
       </div>
